@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vase Collection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background: #ddd;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+        section {
+            padding: 20px;
+        }
+        .intro {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .intro-text {
+            flex: 1;
+            padding: 20px;
+            min-width: 300px;
+            max-width: 600px;
+        }
+        .intro-3d {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-width: 300px;
+            max-width: 600px;
+        }
+        .intro-images {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .intro-images img {
+            max-width: 100%;
+            width: 300px;
+            height: auto;
+            flex-grow: 1;
+        }
+        .item {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 20px;
+        }
+        .item > div {
+            flex: 1;
+            padding: 10px;
+            min-width: 300px;
+        }
+        .item .images {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .item .images img {
+            max-width: 100%;
+            height: auto;
+        }
+        .item .model-viewer {
+            margin-top: 10px;
+            text-align: center;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            .intro {
+                flex-direction: column;
+            }
+            .intro-images img {
+                width: 100%; /* Full width for small screens */
+            }
+            .item {
+                flex-direction: column;
+            }
+            .item .images img {
+                width: 100%; /* Full width for small screens */
+            }
+        }
+        @media (max-width: 480px) {
+            header {
+                height: 300px;
+            }
+            .intro-text {
+                padding: 10px;
+            }
+            .intro-3d {
+                padding: 10px;
+            }
+            .intro-images {
+                gap: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div>
+            <img src="./images/HERO.jpg" alt="Intro Vase 3" style="width: 100%; height: auto;">
+        </div>
+    </section>
+    <section class="intro">
+        <div class="intro-text">
+            <h2>Welcome to the Vase Collection</h2>
+            <p>Kangxi period blue and white porcelain often features motifs inspired by nature, literature, and mythology...</p>
+        </div>
+    </section>
+    <hr>
+    <section class="intro">
+        <div class="intro-text">
+            <h2>Blue and White Vases</h2>
+            <p><b>Object Description:</b> This section provides a basic physical description of the vase...</p>
+        </div>
+        <div class="intro-3d">
+            <p>[3D Model Placeholder for Intro Vase]</p>
+        </div>
+    </section>
+    <section class="intro-images">
+        <img src="./images/ blue and white vases1.png" alt="Intro Vase 1">
+        <img src="./images/ blue and white vases2.png" alt="Intro Vase 2">
+        <img src="./images/ blue and white vases3.png" alt="Intro Vase 3">
+    </section>
+    <hr>
+    <section class="intro">
+        <div class="intro-text">
+            <h2>Covered Baluster Vase</h2>
+            <p><b>Object Description:</b> This section describes the covered baluster vase...</p>
+        </div>
+        <div class="intro-3d">
+            <p>[3D Model Placeholder for Intro Vase]</p>
+        </div>
+    </section>
+    <section class="intro-images">
+        <img src="./images/Covered baluster vase1.png" alt="Intro Vase 1">
+        <img src="./images/Covered baluster vase2.png" alt="Intro Vase 2">
+        <img src="./images/Covered baluster vase3.png" alt="Intro Vase 3">
+    </section>
+    <hr>
+    <section class="intro">
+        <div class="intro-text">
+            <h2>Beaker-shaped Vase</h2>
+            <p><b>Object Description:</b> This section describes the beaker-shaped vase as part of a five-piece garniture...</p>
+        </div>
+        <div class="intro-3d">
+            <p>[3D Model Placeholder for Intro Vase]</p>
+        </div>
+    </section>
+    <section class="intro-images">
+        <img src="./images/Beaker-shaped vase1.png" alt="Intro Vase 1">
+        <img src="./images/Beaker-shaped vase2.png" alt="Intro Vase 2">
+        <img src="./images/Beaker-shaped vase3.png" alt="Intro Vase 3">
+    </section>
+    <footer>
+        <p>&copy; 2024 Vase Collection. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
+
