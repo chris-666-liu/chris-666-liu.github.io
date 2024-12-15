@@ -3,201 +3,185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vase Collection</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-        header {
-            background: #ddd;
-            height: 400px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-        header h1 {
-            font-size: 3rem;
-            margin: 0;
-        }
-        section {
-            padding: 20px;
-        }
-        .intro {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        .intro-text {
-            flex: 1;
-            padding: 20px;
-            min-width: 300px;
-            max-width: 600px;
-        }
-        .intro-3d {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-width: 300px;
-            max-width: 600px;
-        }
-        .intro-images {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 20px;
-        }
-        .intro-images img {
-            max-width: 100%;
-            width: 300px;
-            height: auto;
-            flex-grow: 1;
-        }
-        .item {
-            display: flex;
-            flex-wrap: wrap;
-            margin-bottom: 40px;
-            border-bottom: 1px solid #ccc;
-            padding-bottom: 20px;
-        }
-        .item > div {
-            flex: 1;
-            padding: 10px;
-            min-width: 300px;
-        }
-        .item .images {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        .item .images img {
-            max-width: 100%;
-            height: auto;
-        }
-        .item .model-viewer {
-            margin-top: 10px;
-            text-align: center;
-        }
-        footer {
-            background: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-        }
-        /* Responsive Styles */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2rem;
-            }
-            .intro {
-                flex-direction: column;
-            }
-            .intro-images img {
-                width: 100%; /* Full width for small screens */
-            }
-            .item {
-                flex-direction: column;
-            }
-            .item .images img {
-                width: 100%; /* Full width for small screens */
-            }
-        }
-        @media (max-width: 480px) {
-            header {
-                height: 300px;
-            }
-            .intro-text {
-                padding: 10px;
-            }
-            .intro-3d {
-                padding: 10px;
-            }
-            .intro-images {
-                gap: 5px;
-            }
-        }
-    </style>
+    <title>Celadon Collectibles Exhibition</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
 <body>
-    <section>
-        <div>
-            <img src="./images/HERO.jpg" alt="Intro Vase 3" style="width: 100%; height: auto;">
+    <!-- Header and Photo Section -->
+    <header>
+        <h1>Toronto Craft Museum Qing Dynasty Vase Special Exhibition</h1>
+        <div class="photo-area">
+            <img src="/images/HERO.jpg" alt="Celadon Exhibition Photo">
+        </div>
+    </header>
+
+    <!-- Introduction Section -->
+    <section class="introduction">
+        <h2>Introduce</h2>
+        <p>
+            This is the introduce area. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Vivamus vehicula lorem a justo posuere facilisis.
+        </p>
+    </section>
+
+    <!-- Collection 1 -->
+    <section class="collection">
+        <h2>Collection 1 - Beaker shaped vase</h2>
+        <div class="content">
+            <div class="container1">
+                <div class="model-area">
+                    <model-viewer src="/assets/Beaker-shaped-vase.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1" environment-image="legacy" exposure="0.82" shadow-softness="0.79">
+                        <button class="Hotspot" slot="hotspot-1" data-position="0.015595985981385787m 0.06901018246800028m 0.051862627779192705m" data-normal="0.30537099918727056m -0.07680950913704285m 0.9491305769816367m" data-visibility-attribute="visible">
+                            <div class="HotspotAnnotation">a court lady being entertained by a dancer and musicians.</div>
+                        </button><button class="Hotspot" slot="hotspot-2" data-position="0.025943647851767913m -0.0959926761659356m 0.041734985127146906m" data-normal="0.45797327018965417m 0.04763422116267949m 0.8876888333002838m" data-visibility-attribute="visible">
+                            <div class="HotspotAnnotation">white porcelain with a clear, feldspathic glaze</div>
+                        </button>
+                        <div class="progress-bar hide" slot="progress-bar">
+                            <div class="update-bar"></div>
+                        </div>
+                        <button slot="ar-button" id="ar-button">
+                            View in your space
+                        </button>
+                        <div id="ar-prompt">
+                            <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+                        </div>
+                    </model-viewer>
+             </div>
+                <div class="text-area">
+                    <h3>Introduce</h3>
+                 <p>This is a beaker-shaped vase, one of two in a five-piece garniture.
+                     It is made of white porcelain with a clear, feldspathic glaze. 
+                     The vase is decorated with underglaze cobalt blue painting depicting 
+                     a court scene.It was created in Jingdezhen, Jiangxi province, China, 
+                     during the Kangxi reign (1662-1722) of the Qing dynasty.</p>
+                <p>A garniture is a set of decorative vases or other objects, typically 
+                    made of porcelain or ceramic, intended to be displayed together.
+                     This vase was part of a five-piece garniture, meaning it was originally 
+                     displayed with four other matching pieces.
+                     The vase is decorated in underglaze cobalt blue with a court scene similar 
+                     to that found on the baluster vases in the same garniture. It also depicts 
+                     court ladies in a garden setting. The different scenes are divided by herringbone 
+                     borders.</p>    
+                </div>
+            </div>
+            <div class="image-gallery">
+                <img src="/images/Beaker-shaped vase3 2.png" alt="Image 1">
+                <img src="/images/Beaker-shaped vase1-1.png" alt="Image 2">
+                <img src="/images/Beaker-shaped vase2-2.png" alt="Image 3">
+            </div>
         </div>
     </section>
-    <section class="intro">
-        <div class="intro-text">
-            <h2>Welcome to the Vase Collection</h2>
-            <p>Kangxi period blue and white porcelain often features motifs inspired by nature, literature, and mythology...</p>
-            <p>These vases offer a compelling window into the artistry and material culture of the Qing dynasty. They demonstrate the technical skill of Jingdezhen potters, the aesthetic preferences of the Kangxi period, and the historical movement of Chinese art into Western collections. The detailed provenance information reveals the shifting value and significance attached to these objects over time.</p>
+
+    <!-- Collection 2 -->
+    <section class="collection">
+        <h2>Collection 2 - Covered baluster vase</h2>
+        <div class="content">
+            <div class="container1">
+                <div class="model-area">
+                    <model-viewer src="/assets/Covered-baluster-vase.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1" environment-image="legacy" exposure="0.82" shadow-softness="0.79">
+                        <button class="Hotspot" slot="hotspot-1" data-position="0.06480336354149509m 0.12593653445855915m 0.03434553996723755m" data-normal="0.7809647763093764m 0.46207214569210453m 0.4202182175245862m" data-visibility-attribute="visible">
+                            <div class="HotspotAnnotation">Baluster Vase</div>
+                        </button><button class="Hotspot" slot="hotspot-2" data-position="0.041554335478313636m -0.02199216031122747m 0.0654674938740597m" data-normal="0.5633892442061557m -0.15328625325785963m 0.8118472048821651m" data-visibility-attribute="visible">
+                            <div class="HotspotAnnotation">Kangxi Reign</div>
+                        </button><button class="Hotspot" slot="hotspot-3" data-position="0.04506996177557409m -0.09989788274607303m 0.0453062460966307m" data-normal="0.7448604890947783m -0.15931423814665893m 0.6479211567075405m" data-visibility-attribute="visible">
+                            <div class="HotspotAnnotation">Jingdezhen</div>
+                        </button><button class="Hotspot" slot="hotspot-4" data-position="0.0070435202512583416m 0.028746396352293035m 0.08389063720444634m" data-normal="0.12595783826410348m -0.015549239600235697m 0.991913728167772m" data-visibility-attribute="visible">
+                            <div class="HotspotAnnotation">a vibrant blue color</div>
+                        </button><button class="Hotspot" slot="hotspot-5" data-position="0.020406939441220698m 0.11366351376951417m 0.07660359689847696m" data-normal="0.2788007447715843m 0.2576203603808104m 0.9251496606668952m" data-visibility-attribute="visible">
+                            <div class="HotspotAnnotation">the transparent glaze</div>
+                        </button>
+                        <div class="progress-bar hide" slot="progress-bar">
+                            <div class="update-bar"></div>
+                        </div>
+                        <button slot="ar-button" id="ar-button">
+                            View in your space
+                        </button>
+                        <div id="ar-prompt">
+                            <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+                        </div>
+                    </model-viewer>
+                    
+             </div>
+                <div class="text-area">
+                    <h3>Introduce</h3>
+                 <p>This object is a covered baluster vase, one of three in a five-piece garniture. 
+                    It is made of white porcelain with a clear, feldspathic glaze. The vase is decorated 
+                    with underglaze cobalt blue painting. The main scene depicts a court lady being entertained 
+                    by a dancer and musicians. The neck of the vase is decorated with floral sprays, and the domed
+                     cover features ladies, flowers, rocks, and a bud-shaped finial knob.
+                     This vase dates back to the Kangxi reign (1662-1722) of the Qing dynasty in China. It is a
+                      prime example of Jingdezhen ware, known for its high quality and beautiful blue-and-white decoration.
+                       The vase's provenance includes prominent collectors such as Duveen Brothers, Mrs. B. F. Jones,
+                        and Myron S. Falk, Sr.</p>
+                <p>This vase was made in Jingdezhen, Jiangxi province, China, a renowned center for porcelain production 
+                    since the Yuan dynasty.</p> 
+                    <p>The assembled vase, including the cover, has a height of 45.5 cm (17 15/16 in) and a diameter of 
+                        17.1 cm (6 3/4 in).A garniture is a set of decorative objects, typically vases, designed to be displayed 
+                        together. This vase was part of a five-piece garniture, which likely included two other covered baluster 
+                        vases and two beaker-shaped vases.</p>    
+                </div>
+            </div>
+            <div class="image-gallery">
+                <img src="/images/Covered baluster vase1.jpg" alt="Image 1">
+                <img src="/images/Covered baluster vase2.jpg" alt="Image 2">
+                <img src="/images/Covered baluster vase3.jpg" alt="Image 3">
+            </div>
         </div>
     </section>
-    <hr>
-    <section class="intro">
-        <div class="intro-text">
-            <h2>Blue and White Vases</h2>
-            <p><b>Object Description:</b> This section provides a basic physical description of the vase, noting its shape, design elements, and materials. It highlights its trumpet shape, the blue and white color scheme, and the prominent lotus scroll motif.
-                <p><b>Provenance and Ownership:</b> This portion outlines the vase's ownership history, tracing it from the previous custodian, Pierre Durand, to its acquisition by the Freer Gallery of Art in 1992.
-                <p><b> Dating and Origin: </b>This section establishes the vase's creation during the Kangxi period of the Qing dynasty (mid-17th to early 18th century), pinpointing Jingdezhen in Jiangxi province as its origin.
-                <p><b> Classification and Dimensions:</b> This part classifies the object as a vessel of Jingdezhen ware, providing its precise measurements in centimeters and inches.
-                <p><b>  Metadata and Identification: </b>This concluding section lists the object's unique identifiers, including the accession number, record ID, and GUID, along with usage restrictions and digital resource links.</p>
-        </div>
-        <div class="intro-3d">
-            <p>[3D Model Placeholder for Intro Vase]</p>
-        </div>
-    </section>
-    <section class="intro-images">
-        <img src="./images/ blue and white vases1.png" alt="Intro Vase 1">
-        <img src="./images/ blue and white vases2.png" alt="Intro Vase 2">
-        <img src="./images/ blue and white vases3.png" alt="Intro Vase 3">
-    </section>
-    <hr>
-    <section class="intro">
-        <div class="intro-text">
-            <h2>Covered Baluster Vase</h2>
-            <p><b>Object Description:</b> This section describes the covered baluster vase, another piece from the same five-piece garniture. The description highlights the depiction of a court lady with a dancer and musicians, the floral motifs, and the domed cover with its bud-shaped finial. Like the beaker-shaped vase, it includes mention of a wooden stand.</p>
-            <p><b>Shared Provenance: </b> This section reiterates the detailed provenance history shared with the beaker-shaped vase (F1980.194a-b), highlighting the journey through the same series of owners and the eventual donation to the Freer Gallery of Art. References to archival documents and auction catalogues are provided.</p>
-            <p><b>Dating and Origin: </b> Again, this section dates the vase to the Kangxi reign (1662-1722) of the Qing dynasty and places its origin in Jingdezhen.</p>
-            <p><b>Thematic Topics: </b> This section expands on the object's descriptive elements, listing thematic keywords like "flower," "music," "dance," and "musician," reflecting the scene depicted on the vase.</p>
-            <p><b>Classification, Dimensions, and Material: </b> Similar to the previous entries, this section classifies the object as Jingdezhen ware, provides specific dimensions, and notes the materials used in its creation.</p>
-            <p><b>Metadata and Identification: </b> This final section consistently presents the accession number, record ID, GUID, usage rights, and links to online resources, offering comprehensive information for identification and access.</p>
-        </div>
-        <div class="intro-3d">
-            <p>[3D Model Placeholder for Intro Vase]</p>
-        </div>
-    </section>
-    <section class="intro-images">
-        <img src="./images/Covered baluster vase1.png" alt="Intro Vase 1">
-        <img src="./images/Covered baluster vase2.png" alt="Intro Vase 2">
-        <img src="./images/Covered baluster vase3.png" alt="Intro Vase 3">
-    </section>
-    <hr>
-    <section class="intro">
-        <div class="intro-text">
-            <h2>Beaker-shaped Vase</h2>
-            <p><b>Object Description: </b>This section describes the beaker-shaped vase as part of a five-piece garniture, emphasizing its blue-and-white design featuring a court scene and garden setting, framed by herringbone borders. It also notes the presence of a previously unrecorded wooden stand.
-                <p><b>Extensive Provenance: </b>This detailed section meticulously tracks the vase's journey through various owners and auctions. Starting with Duveen Brothers, it follows its path to Mrs. B. F. Jones Jr., Myron S. Falk Sr. and Jr., and finally to the Freer Gallery of Art as a gift in 1980. The section includes specific dates, sale details, and insightful annotations referencing archival documentation.</p>
-                <p><b>Dating and Origin: </b>Like the previous vase, this section places the beaker's creation during the Kangxi reign of the Qing dynasty (1662-1722) in Jingdezhen.
-                <p><b>Classification, Dimensions, and Material:  </b>This section identifies the object as a Jingdezhen ware vessel, specifying its measurements and highlighting the use of cobalt pigment under a clear colorless glaze.</p>
-                <p><b> Metadata and Identification: </b>This final section mirrors the previous entry, listing the accession number, record ID, GUID, along with copyright information, usage rights, and links to online resources.</p>
-        <div class="intro-3d">
-            <p>[3D Model Placeholder for Intro Vase]</p>
-        </div>
-    </section>
-    <section class="intro-images">
-        <img src="./images/Beaker-shaped vase1.png" alt="Intro Vase 1">
-        <img src="./images/Beaker-shaped vase2.png" alt="Intro Vase 2">
-        <img src="./images/Beaker-shaped vase3.png" alt="Intro Vase 3">
-    </section>
+   
+
+    <!-- Collection 3 -->
+    <section class="collection">
+        <h2>Collection 3 - Blue and white vases</h2>
+        <div class="content">
+            <div class="container1">
+                <div class="model-area">
+                    <model-viewer src="/assets/Blue-and-white-vases.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1">
+                        <button class="Hotspot" slot="hotspot-1" data-position="0.045428827690880524m 0.05241827168352515m 0.04116788492847312m" data-normal="0.7381448558707845m 0.06269676925365925m 0.6717226264438712m" data-visibility-attribute="visible">
+                            <div class="HotspotAnnotation"> cobalt blue pigment under a clear glaze</div>
+                        </button><button class="Hotspot" slot="hotspot-2" data-position="0.06488321032708622m -0.07235344648888276m 0.02456325890938016m" data-normal="0.92001135813102m -0.26344494873692303m 0.2901307634411008m" data-visibility-attribute="visible">
+                            <div class="HotspotAnnotation">a hallmark of Jingdezhen ware</div>
+                        </button>
+                        <div class="progress-bar hide" slot="progress-bar">
+                            <div class="update-bar"></div>
+                        </div>
+                        <button slot="ar-button" id="ar-button">
+                            View in your space
+                        </button>
+                        <div id="ar-prompt">
+                            <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+                        </div>
+                    </model-viewer>
+                    
+             </div>
+                <div class="text-area">
+                    <h3>Introduce</h3>
+                 <p>The vase is made of porcelain with a cobalt blue pigment under a clear glaze.
+
+                 </p>
+                <p>This vase was made in Jingdezhen, Jiangxi province, China, a renowned center for porcelain production 
+                    since the Yuan dynasty.The vase is 44.5 cm (17 1/2 in) high and has a diameter of 21.4 cm (8 7/16 in).</p> 
+                    <p>The vase is crafted in the Jingdezhen ware style, a type of porcelain known for its high quality 
+                        and intricate designs.</p>    
+                        <p>The vase is decorated with a large, loose lotus scroll on each of its three sections.
+                             A band filled with a diaper pattern encircles the central lobed section. The design 
+                             was inspired by ancient bronze Ku vessels.</p>   
+                        <p>
+                            The vase was made in Jingdezhen, Jiangxi province, China, during the Kangxi 
+                            period of the Qing dynasty. This dates the vase to the mid-17th to early 18th century.
+                        </p>
+                </div>
+            </div>
+            <div class="image-gallery">
+                <img src="/images/Covered baluster vase1.jpg" alt="Image 1">
+                <img src="/images/Covered baluster vase2.jpg" alt="Image 2">
+                <img src="/images/Covered baluster vase3.jpg" alt="Image 3">
+            </div>
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Vase Collection. All Rights Reserved.</p>
+        <p>Footer area - Toronto Craft Museum © 2024</p>
     </footer>
 </body>
 </html>
